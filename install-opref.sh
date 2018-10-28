@@ -1,9 +1,13 @@
 
-wget http://prdownloads.sourceforge.net/oprofile/oprofile-1.3.0.tar.gz
-tar -zxvf oprofile-1.3.0.tar.gz 
-cd oprofile-1.3.0
+FILENAME=oprofile-1.3.0
+wget http://prdownloads.sourceforge.net/oprofile/$FILENAME.tar.gz
+tar -zxvf $FILENAME.tar.gz
+cd $FILENAME
 ./configure
 make
 make install
 cd ../
-rm -rf oprofile-1.3.0
+rm -rf $FILENAME
+rm $FILENAME.tar.gz
+chmod +x profile.sh
+mv /profile.sh /usr/bin/profile
