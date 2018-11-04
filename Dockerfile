@@ -2,7 +2,7 @@ FROM ubuntu:18.04
 
 RUN apt-get update && \
     apt-get install curl wget git build-essential \ 
-                    llvm valgrind binutils-dev \
+                    llvm lldb valgrind binutils-dev \
                     libiberty-dev libpopt-dev sudo -y && \ 
     apt-get autoremove && \
     apt-get clean
